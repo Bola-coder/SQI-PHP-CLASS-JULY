@@ -25,7 +25,7 @@ echo "Hello World" . "<br />";
 $name = "John Douglas";
 $age = 12;
 $_status = true;
-// var_dump($name);
+var_dump($name);
 // echo "Welcome " . $name . "  " . "We are very pleased to have ypu here..." . "<br />";
 
 $name = 456;
