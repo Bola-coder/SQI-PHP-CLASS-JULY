@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h2>Welcome to Php</h2>
+    <h2 style="color: green;">Welcome to Php</h2>
     <?php echo "Welcome to Php Yayy!"; ?>
     <?php print "Hello world"; ?>
 </body>
