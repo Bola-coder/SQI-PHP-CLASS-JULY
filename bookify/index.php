@@ -1,23 +1,36 @@
 <?php
+session_start();
 $books = [
-    ["title" => "There was a country", "author" => "Chinua Achebe", "ISBN" => "CA75758", "price" => 8000],
-    ["title" => "Things fall apart", "author" => "Chinua Achebe", "ISBN" => "CA55646", "price" => 4000],
-    ["title" => "The Lion and the jewel", "author" => "Wole Soyinka", "ISBN" => "Ws90762", "price" => 7500],
-    ["title" => "Purple Hibiscuss", "author" => "Chiamanad Adiche", "ISBN" => "CA54123", "price" => 5000],
-    ["title" => "Atomic Habits", "author" => "James Clear", "ISBN" => "JC53674", "price" => 3000],
-    ["title" => "Can't Hurt Me", "author" => "David Goggins", "ISBN" => "DG67120", "price" => 4000],
-    ["title" => "The Tempest", "author" => "Williams Shakespear", "ISBN" => "WS62901", "price" => 3000],
+    ["id" => 1, "title" => "There was a country", "author" => "Chinua Achebe", "ISBN" => "CA75758", "price" => 8000],
+    ["id" => 2, "title" => "Things fall apart", "author" => "Chinua Achebe", "ISBN" => "CA55646", "price" => 4000],
+    ["id" => 3, "title" => "The Lion and the jewel", "author" => "Wole Soyinka", "ISBN" => "Ws90762", "price" => 7500],
+    ["id" => 4, "title" => "Purple Hibiscuss", "author" => "Chiamanad Adiche", "ISBN" => "CA54123", "price" => 5000],
+    ["id" => 5, "title" => "Atomic Habits", "author" => "James Clear", "ISBN" => "JC53674", "price" => 3000],
+    ["id" => 6, "title" => "Can't Hurt Me", "author" => "David Goggins", "ISBN" => "DG67120", "price" => 4000],
+    ["id" => 7, "title" => "The Tempest", "author" => "Williams Shakespear", "ISBN" => "WS62901", "price" => 3000],
 ];
 
 function addBook($title, $author, $ISBN, $price)
 {
     global $books;
     array_push($books, [
+        "id" => count($books) + 1,
         "title" => $title,
         "author" => $author,
         "ISBN" => $ISBN,
         "price" => $price
     ]);
+}
+
+function viewBookDetaiils($bookId)
+{
+    global $books;
+    foreach ($books as $book) {
+        if ($book['id'] == $bookId) {
+            return $book;
+        }
+    }
+    return null;
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -32,6 +45,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         addBook($title, $author, $ISBN, $price);
     }
+} else if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    if (isset($_GET['view_book'])) {
+        $bookID = $_GET['book_id'];
+        $bookdetails = viewBookDetaiils($bookID);
+        if ($bookdetails) {
+            $_SESSION['book'] = $bookdetails;
+            header("Location: viewbook.php");
+        } else {
+            echo "Book not found";
+        }
+    }
 }
 ?>
 
@@ -42,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookify</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
@@ -60,7 +84,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <p>$book[author]</p>
                     <p>$book[ISBN]</p>
                     <p>$book[price]</p>
-                    <button>View Book Details</button>
+                    <p>$book[id]</p>
+                    <form class='viewbook__form'  method='GET'>
+                        <input type='hidden' name='book_id' value='$book[id]'>
+                        <button type='submit' name='view_book'>View Book Details</button>
+                    </form>
                 </div>";
             }
             ?>

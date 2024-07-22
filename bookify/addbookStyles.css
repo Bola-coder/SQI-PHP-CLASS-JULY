@@ -1,0 +1,50 @@
+#addbook__form {
+  background-color: #e0e0e0;
+  border: 1px solid #666666;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+
+.form__title {
+  color: #1e3a8a;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.form__group {
+  margin-bottom: 1em;
+}
+
+.form__group label {
+  display: block;
+  margin-bottom: 0.5em;
+  color: #666666;
+}
+
+.form__input {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form__submit-btn {
+  width: 100%;
+  padding: 1em;
+  background-color: #1e3a8a;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form__submit-btn:hover {
+  background-color: #ffb703;
+}

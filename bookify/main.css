@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
+  background-color: #ffffff;
 }
 
 nav {
@@ -84,6 +84,12 @@ main h1 {
   margin: 0.3em 0;
 }
 
+form {
+  padding: 0;
+  width: inherit;
+  display: inline;
+}
+
 .book button {
   background-color: #1e3a8a;
   color: #ffffff;
@@ -98,55 +104,33 @@ main h1 {
   background-color: #ffb703;
 }
 
-/* Add New Book styles */
-
-form {
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 2em;
-  width: 600px;
-  margin: 0 auto;
-  margin-top: 40px;
-  box-sizing: border-box;
+.book button a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.form__title {
-  color: #1e3a8a;
-  margin-bottom: 1em;
+.bookdetails__title {
   text-align: center;
+  color: #333;
+  margin-top: 20px;
 }
 
-.form__group {
-  margin-bottom: 1em;
-}
-
-.form__group label {
-  display: block;
-  margin-bottom: 0.5em;
-  color: #666666;
-}
-
-.form__input {
-  width: 100%;
-  padding: 1em;
-  border: 1px solid #e0e0e0;
+.book-details {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
   border-radius: 5px;
-  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.form__submit-btn {
-  width: 100%;
-  padding: 1em;
-  background-color: #1e3a8a;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.book-details p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 10px;
 }
 
-.form__submit-btn:hover {
-  background-color: #ffb703;
+.book-details p strong {
+  color: #333;
 }
