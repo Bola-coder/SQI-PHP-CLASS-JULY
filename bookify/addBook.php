@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New Book</title>
     <link rel="stylesheet" href="addBookStyles.css">
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -19,7 +18,7 @@
     ?>
 
     <div class="addbook">
-        <form action="index.php" method="POST" id="addbook__form">
+        <form action="index.php" method="POST" class="addbook__form">
             <h2 class="form__title">Add a new book</h2>
             <div class="form__group">
                 <label for="title">Title</label>

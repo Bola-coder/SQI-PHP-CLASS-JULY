@@ -10,7 +10,7 @@ $book = $_SESSION['book'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookify | View book details</title>
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
@@ -22,6 +22,7 @@ $book = $_SESSION['book'];
             <p>Author: <?php echo $book['author']; ?></p>
             <p>ISBN: <?php echo $book['ISBN']; ?></p>
             <p>Price: <?php echo $book['price']; ?></p>
+            <button class="edit-btn"><a style="text-decoration: none; color: inherit;" href="editBook.php">Edit Book</a></button>
         </div>
     <?php else : ?>
         <p>No book details available.</p>

@@ -1,0 +1,40 @@
+nav {
+  background-color: #1e3a8a;
+  /* Primary Blue Color */
+  color: #ffffff;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.menus {
+  display: flex;
+}
+
+.menu {
+  margin-left: 1em;
+}
+
+.menu p {
+  margin: 0;
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #ffb703;
+  /* Secondary Color */
+}

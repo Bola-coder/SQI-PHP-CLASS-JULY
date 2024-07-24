@@ -3,45 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ffffff;
-}
-
-nav {
-  background-color: #1e3a8a;
-  /* Primary Blue Color */
-  color: #ffffff;
-  padding: 1em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav h1 {
-  margin: 0;
-  font-size: 1.5em;
-}
-
-.menus {
-  display: flex;
-}
-
-.menu {
-  margin-left: 1em;
-}
-
-.menu p {
-  margin: 0;
-}
-
-.menu a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1em;
-  transition: color 0.3s;
-}
-
-.menu a:hover {
-  color: #ffb703;
-  /* Secondary Color */
+  overflow-x: hidden;
 }
 
 main {
@@ -133,4 +95,16 @@ form {
 
 .book-details p strong {
   color: #333;
+}
+
+.edit-btn {
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 6px;
+  color: #ffffff;
+  background-color: blue;
+}
+
+.edit-btn:hover {
+  opacity: 0.7;
 }
