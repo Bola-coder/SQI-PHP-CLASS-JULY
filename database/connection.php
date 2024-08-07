@@ -3,7 +3,7 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$database = "class";
+$database = "bookify";
 
 $conn = new mysqli($host, $username, $password, $database);
 
@@ -11,7 +11,7 @@ $conn = new mysqli($host, $username, $password, $database);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-echo "Database connected successfullyy";
+// echo "Database connected successfullyy";
 
 $sql = "SELECT * FROM users WHERE id > 5";
 

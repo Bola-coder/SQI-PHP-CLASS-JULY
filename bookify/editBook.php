@@ -33,10 +33,10 @@ $price = htmlspecialchars($book['price'], ENT_QUOTES, 'UTF-8');
                 <label for="title">Title</label>
                 <input type="text" name="title" class="form__input" value="<?php echo $title; ?>" />
             </div>
-            <div class="form__group">
+            <!-- <div class="form__group">
                 <label for="author">Author</label>
                 <input type="text" name="author" class="form__input" value="<?php echo $author; ?>" />
-            </div>
+            </div> -->
             <div class="form__group">
                 <label for="isbn">ISBN</label>
                 <input type="text" name="isbn" class="form__input" value="<?php echo $isbn; ?>" />
